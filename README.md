@@ -1,17 +1,17 @@
-# streaming-server
+# This server takes streaming data from the client server and then sends it to connected clients.
 
 > ## Install
 
-Install with [npm](https://www.npmjs.com/)
+Install with [npm](https://www.npmjs.com/) or [pnpm](https://www.pnpm.io/)
 
 ```sh
-$ npm i streaming-server --save-dev
+$ pnpm i
 ```
 
 ## Usage
 
-```js
-var streaming-server = require('streaming-server');
+```sh
+$ pnpm run start
 ```
 
 ## Running tests
@@ -30,8 +30,8 @@ Pull requests and stars are always welcome. For bugs and feature requests, [plea
 
 ***
 
-* [github/](https://github.com/)
-* [twitter/](http://twitter.com/)
+* [github/](https://github.com/prabal01pathak/)
+* [twitter/](http://twitter.com/prabal01pathak/)
 
 ## License
 
