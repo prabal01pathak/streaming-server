@@ -2,11 +2,6 @@
 
 > ## Install
 
-## questions
-
-- How are we going to specif the events for the current live stream.
-- can we get the stream of different events in current application.
-
 Install with [npm](https://www.npmjs.com/) or [pnpm](https://www.pnpm.io/)
 
 ```sh
@@ -37,6 +32,7 @@ Pull requests and stars are always welcome. For bugs and feature requests, [plea
 
 - [github/](https://github.com/prabal01pathak/)
 - [twitter/](http://twitter.com/prabal01pathak/)
+
 
 ## License
 
