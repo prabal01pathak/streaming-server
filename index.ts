@@ -92,6 +92,16 @@ wss.on("connection", (ws: websocket, req: any) => {
       });
     }
   });
+  ws.on("close", () => {
+    console.log("connection closed");
+    if (eventId && channel) {
+      console.log("length before: ", clients[eventId][channel].length);
+      clients[eventId][channel] = clients[eventId][channel].filter(
+        (client: websocket) => client !== ws
+      );
+      console.log("length after: ", clients[eventId][channel].length);
+    }
+  });
 
   ws.send("something");
 });
@@ -109,10 +119,11 @@ app.get("/dbcameralist", (req: express.Request, res: express.Response) => {
 
 app.get("/nvrcameralist", (req: express.Request, res: express.Response) => {
   const eventId: string = req.query.eventId as string;
+  console.log("current eventId: ", eventId);
   const data = [];
   if (clients[eventId]) {
     for (const key in clients[eventId]) {
-      data.push({ id: key, name: key });
+      data.push({ id: key, model_name: key });
     }
   }
   res.send(data);
